@@ -86,14 +86,14 @@ Follow these steps to get started with your Friend.
 3. Install [Flutter](https://docs.flutter.dev/get-started/install/macos/mobile-ios?tab=download) and [CocoaPods](https://guides.cocoapods.org/using/getting-started.html)
 4. Install your environment variables
 
-   - For AppWithWearable, open file api_calls.dart located in `apps/AppWithWearable/lib/backend/api_requests ` Find "Whisper" and instead of "key", provide your own api-key for openai whisper for transcriptions to work
+   - For AppWithWearable, Rename file .env.example in folder apps\AppWithWearable\ to .env, then replace "your_actual_api_key_here" with your own api-key for openai whisper for transcriptions to work
 
       <img src="https://github.com/BasedHardware/Friend/assets/43514161/d0fb89d2-07fd-44e3-8563-68f938bb2319" alt="CleanShot 2024-03-25 at 21 58 42" width="400">
 
    then, go to apps/AppWithWearable/lib/custom_code/actions and in the "stream_api_response" file, add your openai key instead of "<key>"
    ![CleanShot 2024-04-11 at 00 17 32](https://github.com/BasedHardware/Friend/assets/43514161/c4d9a61d-df17-4dd5-912e-3e602fa5066c)
 
-   - For AppStandalone, update variables in in .env.template file
+   - For AppStandalone, update variables in .env.template file
 
 5. iOS: [Install XCode](https://apps.apple.com/us/app/xcode/id497799835?mt=12) then navigate to the iOS folder. You might need to launch Xcode to select a team and specify a bundle identifier.
    Android: Download/install [android Studio ](https://developer.android.com/studio) then navigate to the Android folder

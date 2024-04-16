@@ -165,13 +165,14 @@ class WhisperDCall {
     FFUploadedFile? file,
     String? key = '',
   }) async {
+    await dotenv.load(fileName: ".env");
     return ApiManager.instance.makeApiCall(
       callName: 'WHISPER D',
       apiUrl: 'https://api.openai.com/v1/audio/transcriptions',
       callType: ApiCallType.POST,
       headers: {
         'Authorization':
-            'Bearer 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',
+        'Bearer ${dotenv.env['OPENAI_API_KEY']}',
         'Content-Type': 'multipart/form-data',
       },
       params: {

@@ -36,7 +36,7 @@ Future streamApiResponse(
   final headers = {
     'Content-Type': 'application/json',
     'Authorization':
-        'Bearer ${dotenv.env['API_KEY']}',
+        'Bearer ${dotenv.env['OPENAI_API_KEY']}',
   };
 
   // Create Request
