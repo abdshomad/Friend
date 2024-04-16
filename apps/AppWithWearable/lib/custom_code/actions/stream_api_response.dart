@@ -9,6 +9,7 @@ import 'package:http/http.dart' as http; // Fixed the import
 
 import '/flutter_flow/custom_functions.dart'; // Imports custom functions
 import '/flutter_flow/flutter_flow_util.dart';
+import 'package:flutter_dotenv/flutter_dotenv.dart';
 
 // Global variable defined here
 String responseString = "";
@@ -19,6 +20,7 @@ var _client;
 Future streamApiResponse(
   Future<dynamic> Function()? callbackAction,
 ) async {
+  await dotenv.load(fileName: ".env");
   // Add your function code here!
   _client = http.Client();
 
@@ -34,7 +36,7 @@ Future streamApiResponse(
   final headers = {
     'Content-Type': 'application/json',
     'Authorization':
-        'Bearer <key>',
+        'Bearer ${dotenv.env['API_KEY']}',
   };
 
   // Create Request
